@@ -1,0 +1,14 @@
+@mixin overflow-build() {
+  .o-h {
+    overflow: hidden;
+  }
+  /* #ifndef APP-NVUE */
+  .oy-s {
+    overflow-y: scroll;
+  }
+
+  .ox-s {
+    overflow-x: scroll;
+  }
+  /* #endif */
+}

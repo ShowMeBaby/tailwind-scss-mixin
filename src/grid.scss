@@ -1,0 +1,46 @@
+@import '../common/utils.scss';
+
+@mixin grid-normal($column: 2) {
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+}
+
+@mixin grid-gap($row: 10px, $column: 10px) {
+  grid-row-gap: $row;
+  grid-column-gap: $column;
+}
+@mixin grid-row-gap($row: 10px) {
+  grid-row-gap: $row;
+}
+@mixin grid-columg-gap($column: 10px) {
+  grid-column-gap: $column;
+}
+
+@mixin grid-build() {
+  .grid {
+    @include grid-normal();
+  }
+  @for $i from 2 through 12 {
+    .grid-#{$i} {
+      @include grid-normal($i);
+    }
+  }
+
+  @for $i from 1 through 12 {
+    .grid-gap-#{$i*10} {
+      @include grid-gap(px($i * 10), px($i * 10));
+    }
+  }
+
+  @for $i from 1 through 12 {
+    .grid-row-gap-#{$i*10} {
+      @include grid-row-gap(px($i * 10));
+    }
+  }
+
+  @for $i from 1 through 12 {
+    .grid-columg-gap-#{$i*10} {
+      @include grid-columg-gap(px($i * 10));
+    }
+  }
+}

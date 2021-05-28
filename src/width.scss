@@ -1,0 +1,10 @@
+@import '../common/utils.scss';
+
+@mixin width-build() {
+  /* 行高(1~100) */
+  @for $i from 1 through 75 {
+    .w-#{$i*10} {
+      width: px($i * 10);
+    }
+  }
+}

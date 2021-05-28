@@ -1,0 +1,87 @@
+@import '../common/utils.scss';
+
+@mixin text-overflow($line: 1) {
+  @if $line==1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    /* #ifndef APP-NVUE */
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    /* #endif */
+  }
+}
+
+@mixin text-left() {
+  text-align: left;
+}
+@mixin text-right() {
+  text-align: right;
+}
+@mixin text-center() {
+  text-align: center;
+}
+@mixin text-last-justify() {
+  text-align-last: justify;
+}
+@mixin text-build() {
+
+  .t-l {
+    @include text-left();
+  }
+  .t-c {
+    @include text-center();
+  }
+  .t-r {
+    @include text-right();
+  }
+
+
+  /* 特殊处理 */
+  .td-lt {
+    text-decoration: line-through; /* 加删除线 */
+  }
+  .td-ul {
+    text-decoration: underline; /* 加下划线 */
+  }
+  /* #ifndef APP-NVUE */
+  .t-shadow {
+    text-shadow: #999 px(2) px(2) px(5);
+  }
+  .t-last-justify {
+    @include text-last-justify();
+  }
+  .t-overflow {
+    @include text-overflow(1);
+  }
+  @for $i from 1 through 4 {
+    .t-overflow-#{$i} {
+      @include text-overflow($i);
+    }
+  }
+  
+  .t-oh {
+    white-space: nowrap;
+    overflow: hidden; /* 单行超出 */
+    text-overflow: ellipsis;
+  }
+  .t-ohs {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 多行超出 */
+    -webkit-box-orient: vertical;
+  }
+  /* 多少行（3~15） */
+  @for $i from 1 through 20 {
+    .t-lc-#{$i} {
+      -webkit-line-clamp: $i;
+    }
+  }
+  /* #endif */
+}

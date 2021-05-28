@@ -1,0 +1,90 @@
+@import '../common/utils.scss';
+
+// 默认圆角大小
+$radius-md: px(10);
+// 默认边框宽度
+$border-width: 1px;
+// 默认边框颜色
+$border-color: #e8e8e8;
+
+@mixin borderDir($dir, $width: $border-width, $color: $border-color) {
+  border-#{$dir}: $width solid $color;
+}
+@mixin border($color: $border-color, $width: $border-width) {
+  border: $width solid $color;
+}
+@mixin border-top($color: $border-color, $width: $border-width) {
+  @include borderDir(top, $width, $color);
+}
+@mixin border-bottom($color: $border-color, $width: $border-width) {
+  @include borderDir(bottom, $width, $color);
+}
+@mixin border-left($color: $border-color, $width: $border-width) {
+  @include borderDir(left, $width, $color);
+}
+@mixin border-right($color: $border-color, $width: $border-width) {
+  @include borderDir(right, $width, $color);
+}
+
+@mixin radius($radius: $radius-md, $overflow: hidden) {
+  border-radius: $radius;
+  overflow: $overflow;
+}
+@mixin radius-circle($overflow: hidden) {
+  @include radius(50%, $overflow);
+}
+@mixin radius-round($overflow: hidden) {
+  @include radius(1000px, $overflow);
+}
+
+@mixin border-build() {
+  /* #ifndef APP-NVUE */
+  .b-box {
+    box-sizing: border-box;
+  }
+  /* #endif */
+  .b {
+    @include border();
+  }
+  .b-b {
+    @include borderDir(bottom);
+  }
+  .b-t {
+    @include borderDir(top);
+  }
+  .b-l {
+    @include borderDir(left);
+  }
+  .b-r {
+    @include borderDir(right);
+  }
+
+  .b-lr {
+    @include borderDir(left);
+    @include borderDir(right);
+  }
+
+  .b-tb {
+    @include borderDir(top);
+    @include borderDir(bottom);
+  }
+
+  @for $i from 1 through 10 {
+    .br-#{$i*10} {
+      @include radius(px($i * 10));
+    }
+  }
+
+  .br-c {
+    @include radius-circle();
+  }
+  .br-r {
+    @include radius-round();
+  }
+
+  @for $i from 1 through 10 {
+    .b-w-#{$i} {
+      border-width: px($i);
+    }
+  }
+}

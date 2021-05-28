@@ -1,0 +1,20 @@
+@import '../common/theme.scss';
+
+@mixin color-build() {
+  @each $name in map-keys($colors) {
+    .c-#{$name} {
+      color: map-get($colors, $name);
+    }
+  }
+  @each $name in map-keys($colors) {
+    .bg-#{$name} {
+      background-color: map-get($colors, $name);
+    }
+  }
+
+  @each $name in map-keys($colors) {
+    .bc-#{$name} {
+      border-color: map-get($colors, $name);
+    }
+  }
+}

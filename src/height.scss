@@ -1,0 +1,10 @@
+@import '../common/utils.scss';
+
+@mixin height-build() {
+  /* 行高(1~100) */
+  @for $i from 1 through 150 {
+    .h-#{$i*10} {
+      height: px($i * 10);
+    }
+  }
+}

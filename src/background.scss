@@ -1,0 +1,54 @@
+@mixin background-image($url: '') {
+  background-image: url($url);
+  @include background-repeat;
+  @include background-size;
+  @include background-position;
+}
+
+@mixin background-repeat($repeat: no-repeat) {
+  background-repeat: $repeat;
+}
+
+@mixin background-size($size: 100% 100%) {
+  background-size: $size;
+}
+
+@mixin background-position($row: center, $column: center) {
+  background-position: $row $column;
+}
+
+@mixin image-rendering($type: pixelated) {
+  image-rendering: $type;
+}
+@mixin background-build() {
+  .bg-image {
+    @include background-image;
+  }
+  .bg-size-contain {
+    @include background-size(contain);
+  }
+  .img-pixelated {
+    @include image-rendering;
+  }
+  .bg-pos-c {
+    @include background-position(center, center);
+  }
+  .bg-pos-c-t {
+    @include background-position(center, top);
+  }
+  .bg-pos-c-b {
+    @include background-position(center, bottom);
+  }
+  .bg-repeat {
+    @include background-repeat(repeat);
+  }
+  .bg-repeat-x {
+    @include background-repeat(repeat-x);
+  }
+  .bg-repeat-y {
+    @include background-repeat(repeat-y);
+  }
+  .bg-no-repeat {
+    @include background-repeat(no-repeat);
+  }
+}

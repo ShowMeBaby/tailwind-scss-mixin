@@ -1,0 +1,9 @@
+@mixin page-fullscreen() {
+  height: 100vh;
+}
+
+@mixin uniapp-build() {
+  .page-fullscreen {
+    @include page-fullscreen();
+  }
+}

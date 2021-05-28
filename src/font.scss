@@ -1,0 +1,32 @@
+@import '../common/utils.scss';
+
+@mixin font-build() {
+  @for $i from 1 through 12 {
+    .fs-#{$i*5} {
+      font-size: px($i * 5);
+    }
+  }
+
+  @for $i from 1 through 9 {
+    .fw-#{$i*100} {
+      font-weight: $i * 100;
+    }
+  }
+  .fw-b {
+    font-weight: bold;
+  }
+  /* #ifndef APP-NVUE */
+  .fw-l {
+    font-weight: lighter;
+  }
+  /* #endif */
+  .fw-n {
+    font-weight: normal;
+  }
+  /* 行高(1~100) */
+  @for $i from 1 through 100 {
+    .lh-#{$i} {
+      line-height: px($i);
+    }
+  }
+}

@@ -1,0 +1,115 @@
+@import './position.scss';
+
+@mixin reset() {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0 0;
+  text-decoration: none;
+  &::after {
+    display: none;
+  }
+}
+
+@mixin normal-list() {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+
+@mixin rect-box($size: 10px) {
+  width: $size;
+  height: $size;
+  display: block;
+}
+
+@mixin disabled($grey: false) {
+  pointer-events: none;
+  user-select: none;
+  @if ($grey == true) {
+    filter: grayscale(1);
+  }
+}
+
+@mixin __ratioBefore($ratio: 1) {
+  &::before {
+    content: '';
+    display: block;
+    padding-top: $ratio * 100%;
+  }
+}
+@mixin ratio($ratio: 1) {
+  position: relative;
+  @include __ratioBefore($ratio);
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+@mixin image-ratio($ratio: 1, $fit: cover, $children: '*') {
+  position: relative;
+  @include __ratioBefore($ratio);
+  @each $child in $children {
+    & > #{$child} {
+      @include fit-cover($fit);
+    }
+  }
+}
+
+@mixin seo-only() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+}
+
+@mixin others-build() {
+  .seo-only {
+    @include seo-only();
+  } 
+  .ratio {
+    @include ratio();
+  }
+  .normal-list {
+    @include normal-list();
+  }
+  .rect-box {
+    @include rect-box();
+  }
+  .clearfix {
+    @include clearfix();
+  }
+  .reset {
+    @include reset();
+  }
+  .image-ratio {
+    @include image-ratio();
+  }
+  .disabled {
+    @include disabled();
+    &.grey {
+      @include disabled(true);
+    }
+  }
+  .cu-p {
+    cursor: pointer;
+  }
+  .cu-d {
+    cursor: default;
+  }
+}

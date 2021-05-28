@@ -1,0 +1,151 @@
+@mixin flex {
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+}
+
+@mixin flex-row-normal() {
+  @include flex;
+  align-items: center;
+  flex-direction: row;
+}
+@mixin flex-row() {
+  @include flex-row-normal();
+  @include flex-grow-children();
+}
+
+@mixin flex-row-top() {
+  align-items: flex-start;
+}
+@mixin flex-row-middle() {
+  align-items: center;
+}
+@mixin flex-row-bottom() {
+  align-items: flex-end;
+}
+@mixin flex-row-stretch() {
+  align-items: stretch;
+}
+@mixin flex-row-left() {
+  justify-content: flex-start;
+}
+@mixin flex-row-center() {
+  justify-content: center;
+}
+@mixin flex-row-right() {
+  justify-content: flex-end;
+}
+@mixin flex-row-space() {
+  justify-content: space-between;
+}
+@mixin flex-row-wrap() {
+  flex-wrap: wrap;
+}
+
+@mixin flex-col-normal() {
+  @include flex;
+  flex-direction: column;
+}
+@mixin flex-col() {
+  @include flex-col-normal();
+  @include flex-grow-children();
+}
+
+@mixin flex-col-top() {
+  justify-content: flex-start;
+}
+@mixin flex-col-middle() {
+  justify-content: center;
+}
+@mixin flex-col-bottom() {
+  justify-content: flex-end;
+}
+@mixin flex-col-space() {
+  justify-content: space-between;
+}
+@mixin flex-col-left() {
+  align-items: flex-start;
+}
+@mixin flex-col-center() {
+  align-items: center;
+}
+@mixin flex-col-right() {
+  align-items: flex-end;
+}
+
+@mixin flex-center() {
+  @include flex-row-normal();
+  @include flex-row-center();
+}
+
+@mixin flex-grow-children() {
+  & > .grow {
+    flex: 1;
+  }
+  @for $i from 1 through 10 {
+    & > .grow-#{$i} {
+      flex: $i;
+    }
+  }
+}
+
+@mixin flex-build() {
+  .flex-row {
+    @include flex-row();
+    &.top {
+      @include flex-row-top();
+    }
+    &.middle {
+      @include flex-row-middle();
+    }
+    &.bottom {
+      @include flex-row-bottom();
+    }
+    &.stretch {
+      @include flex-row-stretch();
+    }
+    &.left {
+      @include flex-row-left();
+    }
+    &.center {
+      @include flex-row-center();
+    }
+    &.right {
+      @include flex-row-right();
+    }
+    &.space {
+      @include flex-row-space();
+    }
+    &.wrap {
+      @include flex-row-wrap();
+    }
+  }
+
+  .flex-col {
+    @include flex-col();
+    &.top {
+      @include flex-col-top();
+    }
+    &.middle {
+      @include flex-col-middle();
+    }
+    &.bottom {
+      @include flex-col-bottom();
+    }
+    &.space {
+      @include flex-col-space();
+    }
+    &.left {
+      @include flex-col-left();
+    }
+    &.center {
+      @include flex-col-center();
+    }
+    &.right {
+      @include flex-col-right();
+    }
+  }
+  .flex-center {
+    @include flex-center();
+  }
+}

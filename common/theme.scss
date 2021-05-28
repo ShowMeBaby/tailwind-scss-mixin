@@ -1,0 +1,27 @@
+// 当前本库为自用,暂时在此处配置变量
+
+// 常用色值,本库会根据该变量生成c-*/bg-*类,以便原子化调用
+$colors: (
+  primary: #328e80,
+  danger: #d9534f,
+  red: #e47470,
+  background: #eeeeee,
+  white: #ffffff,
+  orange: #f5ad1b,
+  blue: #5f89ce,
+  green: #94bf45,
+  pink: #da8ec5,
+  gray: #909399,
+  black: #000000,
+  e5: #e5e5e5,
+  f1: #f1f1f1,
+  333: #333333,
+  666: #666666,
+  999: #999999,
+  0ff: #00ffff,
+  0f0: #00ff00,
+  ff0: #ffff00,
+  f00: #ff0000,
+  f0f: #ff00ff,
+  00f: #0000ff
+);

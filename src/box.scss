@@ -1,0 +1,78 @@
+@import '../common/utils.scss';
+
+// 默认上下边距
+$col-gap: px(10);
+// 默认左右边距
+$row-gap: px(15);
+
+@mixin margin-row($n: $row-gap) {
+  margin-left: $n;
+  margin-right: $n;
+}
+@mixin margin-col($n: $col-gap) {
+  margin-top: $n;
+  margin-bottom: $n;
+}
+
+@mixin padding-row($n: $row-gap) {
+  padding-left: $n;
+  padding-right: $n;
+}
+@mixin padding-col($n: $col-gap) {
+  padding-top: $n;
+  padding-bottom: $n;
+}
+
+@mixin margin-center() {
+  @include margin-row(auto);
+}
+
+@mixin boxMixin($name, $style) {
+  /* #ifndef APP-NVUE */
+  .#{$name}-auto {
+    #{$style}: auto;
+  }
+  /* #endif */
+  @for $i from 1 through 20 {
+    $pxKey: $i * 5;
+    $pxValue: px($pxKey);
+
+    .#{$name}-#{$pxKey} {
+      #{$style}-left: $pxValue;
+      #{$style}-right: $pxValue;
+      #{$style}-top: $pxValue;
+      #{$style}-bottom: $pxValue;
+    }
+    .#{$name}-l-#{$pxKey} {
+      #{$style}-left: $pxValue;
+    }
+    .#{$name}-r-#{$pxKey} {
+      #{$style}-right: $pxValue;
+    }
+    .#{$name}-t-#{$pxKey} {
+      #{$style}-top: $pxValue;
+    }
+    .#{$name}-b-#{$pxKey} {
+      #{$style}-bottom: $pxValue;
+    }
+    .#{$name}-lr-#{$pxKey} {
+      #{$style}-left: $pxValue;
+      #{$style}-right: $pxValue;
+    }
+    .#{$name}-tb-#{$pxKey} {
+      #{$style}-top: $pxValue;
+      #{$style}-bottom: $pxValue;
+    }
+  }
+}
+
+@mixin box-build() {
+  @include boxMixin(m, margin);
+  @include boxMixin(p, padding);
+  @for $i from 1 through 12 {
+    .box-shadow-#{$i*5} {
+      $j: px($i * 5);
+      box-shadow: 0 0 $j rgba($color: #000000, $alpha: 0.3);
+    }
+  }
+}
