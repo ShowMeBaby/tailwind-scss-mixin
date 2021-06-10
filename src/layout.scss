@@ -39,6 +39,9 @@
 }
 
 @mixin layout-build() {
+  .none {
+    display: none;
+  }
   .block {
     display: block;
   }
