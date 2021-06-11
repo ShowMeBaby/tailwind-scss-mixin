@@ -1,9 +1,15 @@
 @import '../common/utils.scss';
 
 @mixin font-build() {
-  @for $i from 1 through 12 {
-    .fs-#{$i*5} {
-      font-size: px($i * 5);
+  @for $i from 13 through 100 {
+    @if $i<40 {
+      .fs-#{$i} {
+        font-size: px($i);
+      }
+    } @else if $i%5==0 {
+      .fs-#{$i} {
+        font-size: px($i);
+      }
     }
   }
 

@@ -76,6 +76,7 @@
 @mixin flex-center() {
   @include flex-row-normal();
   @include flex-row-center();
+  @include flex-grow-children();
 }
 
 @mixin flex-grow-children() {
