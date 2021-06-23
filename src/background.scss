@@ -39,6 +39,24 @@
   .bg-pos-c-b {
     @include background-position(center, bottom);
   }
+  .bg-pos-l {
+    @include background-position(left, center);
+  }
+  .bg-pos-l-t {
+    @include background-position(left, top);
+  }
+  .bg-pos-l-b {
+    @include background-position(left, bottom);
+  }
+  .bg-pos-r {
+    @include background-position(right, center);
+  }
+  .bg-pos-r-t {
+    @include background-position(right, top);
+  }
+  .bg-pos-r-b {
+    @include background-position(right, bottom);
+  }
   .bg-repeat {
     @include background-repeat(repeat);
   }
