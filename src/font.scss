@@ -29,8 +29,8 @@
   .fw-n {
     font-weight: normal;
   }
-  /* 行高(1~100) */
-  @for $i from 1 through 100 {
+  /* 行高(0~100) */
+  @for $i from 0 through 100 {
     .lh-#{$i} {
       line-height: px($i);
     }
