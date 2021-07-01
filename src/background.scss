@@ -1,5 +1,7 @@
 @mixin background-image($url: '') {
-  background-image: url($url);
+  @if $url != '' {
+    background-image: url($url);
+  }
   @include background-repeat;
   @include background-size;
   @include background-position;
