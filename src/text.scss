@@ -84,4 +84,9 @@
     }
   }
   /* #endif */
+  @for $i from 1 through 20 {
+    .ti-#{$i} {
+      text-indent: px($i);
+    }
+  }
 }
