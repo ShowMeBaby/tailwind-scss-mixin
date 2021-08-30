@@ -1,5 +1,5 @@
+@import '../common/theme.scss';
 @import '../common/utils.scss';
-
 // 默认上下边距
 $col-gap: px(10);
 // 默认左右边距
@@ -72,7 +72,7 @@ $row-gap: px(15);
   @for $i from 1 through 12 {
     .box-shadow-#{$i*5} {
       $j: px($i * 5);
-      box-shadow: 0 0 $j rgba($color: #000000, $alpha: 0.3);
+      box-shadow: 0 0 $j map-get($colors, 'box-shadow-color');
     }
   }
 }

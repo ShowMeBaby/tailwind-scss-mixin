@@ -1,11 +1,11 @@
+@import '../common/theme.scss';
 @import '../common/utils.scss';
-
 // 默认圆角大小
 $radius-md: px(10);
 // 默认边框宽度
 $border-width: 1px;
 // 默认边框颜色
-$border-color: #e8e8e8;
+$border-color: map-get($colors, 'border-color');
 
 @mixin borderDir($dir, $width: $border-width, $color: $border-color) {
   border-#{$dir}: $width solid $color;
