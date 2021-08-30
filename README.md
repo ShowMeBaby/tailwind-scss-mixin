@@ -1,6 +1,6 @@
 本库整合了常见而公用的scss的mixin方法,并基于此生成原子化css,以便用来提升开发效率.
 
-> 目前这个库是一个纯css,他支持任何使用scss的项目,不过目前我是以uniapp为目标平台开发的,本库已支持nvue模式.
+> 目前这个库是一个纯scss库,你也可以通过build index.scss文件生成纯css代码,他支持任何使用scss的项目,不过目前我是以uniapp为目标平台开发的,本库已支持nvue模式.
 
 ## 1、如何使用
 
@@ -79,19 +79,50 @@ module.exports = {
 ## 2、配置项
 
 ```scss
+// 常用色值,本库会根据该变量生成c-*/bg-*类,以便原子化调用
 $colors: (
-  primary: #328e80,
-  danger: #d9534f,
-  red: #e47470,
-  background: #eeeeee,
-  white: #ffffff,
-  orange: #f5ad1b,
-  blue: #5f89ce,
-  green: #94bf45,
-  pink: #da8ec5,
-  gray: #909399,
-  black: #000000,
-  e5: #e5e5e5,
+  /* 
+     ===场景色===
+     主题 */ primary: #328e80,
+  /* 背景 */ background: #eeeeee,
+  /* 次级 */ secondary: #424242,
+  /* 重点 */ accent: #82b1ff,
+  /* 错误 */ error: #ff5252,
+  /* 信息 */ info: #2196f3,
+  /* 危险 */ danger: #d9534f,
+  /* 成功 */ success: #4caf50,
+  /* 警告 */ warning: #ffc107,
+  /* 阴影色 */ box-shadow-color:
+    rgba(
+      $color: #000000,
+      $alpha: 0.3
+    ),
+  /* 边框色 */ border-color: #e8e8e8,
+  /* 
+     ===常用色===
+     红 */ red: #f44336,
+  /* 白 */ white: #ffffff,
+  /* 橙 */ orange: #f5ad1b,
+  /* 深橙 */ deep-orange: #ff5722,
+  /* 蓝 */ blue: #2196f3,
+  /* 浅蓝 */ light-blue: #03a9f4,
+  /* 绿 */ green: #4caf50,
+  /* 浅绿 */ light-green: #8bc34a,
+  /* 黄 */ yellow: #ffeb3b,
+  /* 琥珀 */ amber: #ffc107,
+  /* 酸橙 */ lime: #cddc39,
+  /* 棕 */ brown: #795548,
+  /* 蓝灰 */ blue-grey: #607d8b,
+  /* 青 */ cyan: #009688,
+  /* 粉 */ pink: #e91e63,
+  /* 紫 */ purple: #9c27b0,
+  /* 深紫 */ deep-purple: #673ab7,
+  /* 靛青 */ indigo: #3f51b5,
+  /* 灰 */ gray: #909399,
+  /* 黑 */ black: #000000,
+  /* 
+     ===通用RGB色===
+     通用RGB */ e5: #e5e5e5,
   f1: #f1f1f1,
   333: #333333,
   666: #666666,
@@ -101,7 +132,8 @@ $colors: (
   ff0: #ffff00,
   f00: #ff0000,
   f0f: #ff00ff,
-  00f: #0000ff
+  00f: #0000ff,
+  transparent: transparent
 );
 ```
 
@@ -141,7 +173,7 @@ $colors: (
 
 ### 当class过长时如何合并?
 
-我们可以使用scss的@extend继承来组合我们需要的组件话class.
+我们可以使用scss的@extend继承来组合我们需要的组件和class.
 
 例如这样组合一个类名为d的class:
 
