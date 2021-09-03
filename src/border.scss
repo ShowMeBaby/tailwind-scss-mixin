@@ -45,25 +45,25 @@ $border-color: map-get($colors, 'border-color');
   .b {
     @include border();
   }
-  .b-b {
+  .bb {
     @include borderDir(bottom);
   }
-  .b-t {
+  .bt {
     @include borderDir(top);
   }
-  .b-l {
+  .bl {
     @include borderDir(left);
   }
-  .b-r {
+  .br {
     @include borderDir(right);
   }
 
-  .b-lr {
+  .bx {
     @include borderDir(left);
     @include borderDir(right);
   }
 
-  .b-tb {
+  .by {
     @include borderDir(top);
     @include borderDir(bottom);
   }
@@ -90,7 +90,7 @@ $border-color: map-get($colors, 'border-color');
   }
 
   @for $i from 1 through 10 {
-    .b-w-#{$i} {
+    .bw-#{$i} {
       border-width: px($i);
     }
   }

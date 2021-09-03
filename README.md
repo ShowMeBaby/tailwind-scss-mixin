@@ -30,7 +30,7 @@
 ```
 
 ```html
-<view class="fixed-top flex-row center bottom p-30 m-t-30 fs-30 fw-b b-b b-w-2 br-30"><view class="grow"></view></view>
+<view class="fixed-top flex-row center bottom p-30 mt-30 fs-30 fw-b bb bw-2 br-30"><view class="grow"></view></view>
 ```
 
 ### 使用单个 scss
@@ -161,13 +161,13 @@ $colors: (
 | t-   | text             |
 | td-  | text-decoration  |
 | w-   | width            |
-| *-c  | center           |
-| *-l  | left             |
-| *-r  | right            |
-| *-t  | top              |
-| *-b  | bottom           |
-| *-lr | left&right       |
-| *-tb | top&bottom       |
+| *c   | center           |
+| *l   | left             |
+| *r   | right            |
+| *t   | top              |
+| *b   | bottom           |
+| *x   | left&right       |
+| *y   | top&bottom       |
 
 ## 扩展
 

@@ -43,23 +43,23 @@ $row-gap: px(15);
       #{$style}-top: $pxValue;
       #{$style}-bottom: $pxValue;
     }
-    .#{$name}-l-#{$pxKey} {
+    .#{$name}l-#{$pxKey} {
       #{$style}-left: $pxValue;
     }
-    .#{$name}-r-#{$pxKey} {
+    .#{$name}r-#{$pxKey} {
       #{$style}-right: $pxValue;
     }
-    .#{$name}-t-#{$pxKey} {
+    .#{$name}t-#{$pxKey} {
       #{$style}-top: $pxValue;
     }
-    .#{$name}-b-#{$pxKey} {
+    .#{$name}b-#{$pxKey} {
       #{$style}-bottom: $pxValue;
     }
-    .#{$name}-lr-#{$pxKey} {
+    .#{$name}x-#{$pxKey} {
       #{$style}-left: $pxValue;
       #{$style}-right: $pxValue;
     }
-    .#{$name}-tb-#{$pxKey} {
+    .#{$name}y-#{$pxKey} {
       #{$style}-top: $pxValue;
       #{$style}-bottom: $pxValue;
     }
