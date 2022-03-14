@@ -1,10 +1,16 @@
 @import '../common/utils.scss';
 
 @mixin height-build() {
-  /* 行高(1~100) */
+  /* 高(1~100) */
   @for $i from 1 through 150 {
     .h-#{$i*10} {
       height: px($i * 10);
+    }
+  }
+  /* 高百分比(1~100) */
+  @for $i from 0 through 20 {
+    .h-#{$i*5}\/100 {
+      height: $i * 5%;
     }
   }
 }

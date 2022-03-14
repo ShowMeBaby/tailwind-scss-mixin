@@ -29,6 +29,9 @@
   .bg-size-contain {
     @include background-size(contain);
   }
+  .bg-size-cover {
+    @include background-size(cover);
+  }
   .img-pixelated {
     @include image-rendering;
   }
