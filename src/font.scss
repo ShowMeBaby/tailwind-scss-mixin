@@ -1,6 +1,9 @@
 @import '../common/utils.scss';
 
 @mixin font-build() {
+  .fs-0 {
+    font-size: 0;
+  }
   @for $i from 12 through 100 {
     @if $i<40 {
       .fs-#{$i} {
