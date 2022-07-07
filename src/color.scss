@@ -17,4 +17,28 @@
       border-color: map-get($colors, $name);
     }
   }
+
+  @each $name in map-keys($colors) {
+    .hoverc-#{$name} {
+      &:hover{
+        color: map-get($colors, $name);
+      }
+    }
+  }
+
+  @each $name in map-keys($colors) {
+    .hoverbg-#{$name} {
+      &:hover{
+        background-color: map-get($colors, $name);
+      }
+    }
+  }
+
+  @each $name in map-keys($colors) {
+    .hoverbc-#{$name} {
+      &:hover{
+        border-color: map-get($colors, $name);
+      }
+    }
+  }
 }

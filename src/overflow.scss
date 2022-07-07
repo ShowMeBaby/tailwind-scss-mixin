@@ -2,12 +2,27 @@
   .o-h {
     overflow: hidden;
   }
+
   .os-h {
     overflow-x: hidden;
   }
+
   .oy-h {
     overflow-y: hidden;
   }
+
+  .o-auto{
+    overflow: auto;
+  }
+
+  .ox-auto {
+    overflow-x: auto;
+  }
+
+  .oy-auto {
+    overflow-y: auto;
+  }
+
   /* #ifndef APP-NVUE */
   .oy-s {
     overflow-y: scroll;

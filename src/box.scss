@@ -63,6 +63,33 @@ $row-gap: px(15);
       #{$style}-top: $pxValue;
       #{$style}-bottom: $pxValue;
     }
+
+    .#{$name}-#{$pxKey}-i {
+      #{$style}-left: $pxValue !important;
+      #{$style}-right: $pxValue !important;
+      #{$style}-top: $pxValue !important;
+      #{$style}-bottom: $pxValue !important;
+    }
+    .#{$name}l-#{$pxKey}-i {
+      #{$style}-left: $pxValue !important;
+    }
+    .#{$name}r-#{$pxKey}-i {
+      #{$style}-right: $pxValue !important;
+    }
+    .#{$name}t-#{$pxKey}-i {
+      #{$style}-top: $pxValue !important;
+    }
+    .#{$name}b-#{$pxKey}-i {
+      #{$style}-bottom: $pxValue !important;
+    }
+    .#{$name}x-#{$pxKey}-i {
+      #{$style}-left: $pxValue !important;
+      #{$style}-right: $pxValue !important;
+    }
+    .#{$name}y-#{$pxKey}-i {
+      #{$style}-top: $pxValue !important;
+      #{$style}-bottom: $pxValue !important;
+    }
   }
 }
 

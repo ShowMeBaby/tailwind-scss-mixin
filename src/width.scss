@@ -2,7 +2,7 @@
 
 @mixin width-build() {
   /* 宽(1~100) */
-  @for $i from 1 through 75 {
+  @for $i from 0 through 75 {
     .w-#{$i*10} {
       width: px($i * 10);
     }
@@ -11,7 +11,7 @@
   /* 宽百分比(1~100) */
   @for $i from 0 through 20 {
     .w-#{$i*5}\/100 {
-      width: $i*5%;
+      width: $i * 5%;
     }
   }
 }
