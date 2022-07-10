@@ -59,12 +59,12 @@
   .t-overflow {
     @include text-overflow(1);
   }
-  @for $i from 1 through 4 {
+  @for $i from 1 through 10 {
     .t-overflow-#{$i} {
       @include text-overflow($i);
     }
   }
-  
+
   .t-oh {
     white-space: nowrap;
     overflow: hidden; /* 单行超出 */
@@ -87,6 +87,13 @@
   @for $i from 1 through 20 {
     .ti-#{$i*10} {
       text-indent: px($i*10);
+    }
+  }
+
+  /* 字间距 */
+  @for $i from 1 through 20 {
+    .t-ls-#{$i} {
+      letter-spacing: px($i);
     }
   }
 }
