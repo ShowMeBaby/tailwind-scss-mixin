@@ -2,9 +2,9 @@
 
 // 常用色值,本库会根据该变量生成c-*/bg-*类,以便原子化调用
 $colors: (
-  /* 
+  /*
      ===场景色===
-     主题 */ primary: #328e80,
+     主题 */ primary: #1890ff,
   /* 背景 */ background: #eeeeee,
   /* 次级 */ secondary: #424242,
   /* 重点 */ accent: #82b1ff,
@@ -18,16 +18,17 @@ $colors: (
       $color: #000000,
       $alpha: 0.3
     ),
-  /* 边框色 */ border-color: #e8e8e8,
-  /* 
+  /* 边框色 */ border-color: #dcdfe6,
+  /*
      ===常用色===
      红 */ red: #f44336,
   /* 白 */ white: #ffffff,
   /* 橙 */ orange: #f5ad1b,
   /* 深橙 */ deep-orange: #ff5722,
+  /* 深蓝 */ deep-blue: #1a498c,
   /* 蓝 */ blue: #2196f3,
   /* 浅蓝 */ light-blue: #03a9f4,
-  /* 绿 */ green: #4caf50,
+  /* 绿 */ green: #00973a,
   /* 浅绿 */ light-green: #8bc34a,
   /* 黄 */ yellow: #ffeb3b,
   /* 琥珀 */ amber: #ffc107,
@@ -41,7 +42,7 @@ $colors: (
   /* 靛青 */ indigo: #3f51b5,
   /* 灰 */ gray: #909399,
   /* 黑 */ black: #000000,
-  /* 
+  /*
      ===通用RGB色===
      通用RGB */ e5: #e5e5e5,
   f1: #f1f1f1,
