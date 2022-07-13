@@ -29,7 +29,7 @@ $row-gap: px(15);
 
 @mixin boxMixin($name, $style) {
   /* #ifndef APP-NVUE */
-  .#{$name}-auto {
+  .#{"" + $name}-auto {
     #{$style}: auto;
   }
   /* #endif */
@@ -37,56 +37,56 @@ $row-gap: px(15);
     $pxKey: $i * 5;
     $pxValue: px($pxKey);
 
-    .#{$name}-#{$pxKey} {
+    .#{"" + $name}-#{$pxKey} {
       #{$style}-left: $pxValue;
       #{$style}-right: $pxValue;
       #{$style}-top: $pxValue;
       #{$style}-bottom: $pxValue;
     }
-    .#{$name}l-#{$pxKey} {
+    .#{"" + $name}l-#{$pxKey} {
       #{$style}-left: $pxValue;
     }
-    .#{$name}r-#{$pxKey} {
+    .#{"" + $name}r-#{$pxKey} {
       #{$style}-right: $pxValue;
     }
-    .#{$name}t-#{$pxKey} {
+    .#{"" + $name}t-#{$pxKey} {
       #{$style}-top: $pxValue;
     }
-    .#{$name}b-#{$pxKey} {
+    .#{"" + $name}b-#{$pxKey} {
       #{$style}-bottom: $pxValue;
     }
-    .#{$name}x-#{$pxKey} {
+    .#{"" + $name}x-#{$pxKey} {
       #{$style}-left: $pxValue;
       #{$style}-right: $pxValue;
     }
-    .#{$name}y-#{$pxKey} {
+    .#{"" + $name}y-#{$pxKey} {
       #{$style}-top: $pxValue;
       #{$style}-bottom: $pxValue;
     }
 
-    .#{$name}-#{$pxKey}-i {
+    .#{"" + $name}-#{$pxKey}-i {
       #{$style}-left: $pxValue !important;
       #{$style}-right: $pxValue !important;
       #{$style}-top: $pxValue !important;
       #{$style}-bottom: $pxValue !important;
     }
-    .#{$name}l-#{$pxKey}-i {
+    .#{"" + $name}l-#{$pxKey}-i {
       #{$style}-left: $pxValue !important;
     }
-    .#{$name}r-#{$pxKey}-i {
+    .#{"" + $name}r-#{$pxKey}-i {
       #{$style}-right: $pxValue !important;
     }
-    .#{$name}t-#{$pxKey}-i {
+    .#{"" + $name}t-#{$pxKey}-i {
       #{$style}-top: $pxValue !important;
     }
-    .#{$name}b-#{$pxKey}-i {
+    .#{"" + $name}b-#{$pxKey}-i {
       #{$style}-bottom: $pxValue !important;
     }
-    .#{$name}x-#{$pxKey}-i {
+    .#{"" + $name}x-#{$pxKey}-i {
       #{$style}-left: $pxValue !important;
       #{$style}-right: $pxValue !important;
     }
-    .#{$name}y-#{$pxKey}-i {
+    .#{"" + $name}y-#{$pxKey}-i {
       #{$style}-top: $pxValue !important;
       #{$style}-bottom: $pxValue !important;
     }

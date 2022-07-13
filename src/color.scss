@@ -2,24 +2,24 @@
 
 @mixin color-build() {
   @each $name in map-keys($colors) {
-    .c-#{$name} {
+    .c-#{"" + $name} {
       color: map-get($colors, $name);
     }
   }
   @each $name in map-keys($colors) {
-    .bg-#{$name} {
+    .bg-#{"" + $name} {
       background-color: map-get($colors, $name);
     }
   }
 
   @each $name in map-keys($colors) {
-    .bc-#{$name} {
+    .bc-#{"" + $name} {
       border-color: map-get($colors, $name);
     }
   }
 
   @each $name in map-keys($colors) {
-    .hoverc-#{$name} {
+    .hoverc-#{"" + $name} {
       &:hover{
         color: map-get($colors, $name);
       }
@@ -27,7 +27,7 @@
   }
 
   @each $name in map-keys($colors) {
-    .hoverbg-#{$name} {
+    .hoverbg-#{"" + $name} {
       &:hover{
         background-color: map-get($colors, $name);
       }
@@ -35,7 +35,7 @@
   }
 
   @each $name in map-keys($colors) {
-    .hoverbc-#{$name} {
+    .hoverbc-#{"" + $name} {
       &:hover{
         border-color: map-get($colors, $name);
       }

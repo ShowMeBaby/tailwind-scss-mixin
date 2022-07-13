@@ -2,7 +2,7 @@
 
 @mixin width-build() {
   /* 宽(1~100) */
-  @for $i from 0 through 75 {
+  @for $i from 0 through 150 {
     .w-#{$i*10} {
       width: px($i * 10);
     }

@@ -10,6 +10,15 @@ $border-color: map-get($colors, 'border-color');
 @mixin borderDir($dir, $width: $border-width, $color: $border-color) {
   border-#{$dir}: $width solid $color;
 }
+
+@mixin grid-border($color: $border-color, $width: $border-width) {
+  & > * {
+    border: $width solid $color;
+    margin-left: 0 - $width;
+    margin-top: 0 - $width;
+  }
+}
+
 @mixin border($color: $border-color, $width: $border-width) {
   border: $width solid $color;
 }
@@ -42,6 +51,9 @@ $border-color: map-get($colors, 'border-color');
     box-sizing: border-box;
   }
   /* #endif */
+  .grid-b {
+    @include grid-border();
+  }
   .b {
     @include border();
   }
@@ -68,9 +80,9 @@ $border-color: map-get($colors, 'border-color');
     @include borderDir(bottom);
   }
 
-  @for $i from 0 through 10 {
-    .br-#{$i*10} {
-      @include radius(px($i * 10));
+  @for $i from 0 through 20 {
+    .br-#{$i*5} {
+      @include radius(px($i * 5));
     }
   }
 
@@ -92,6 +104,13 @@ $border-color: map-get($colors, 'border-color');
   @for $i from 1 through 10 {
     .bw-#{$i} {
       border-width: px($i);
+    }
+    .grid-bw-#{$i} {
+      & > * {
+        margin-left: 0 - px($i);
+        margin-top: 0 - px($i);
+        border-width: px($i);
+      }
     }
   }
 }

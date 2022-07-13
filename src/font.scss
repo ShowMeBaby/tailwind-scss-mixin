@@ -5,7 +5,7 @@
     font-size: 0;
   }
   @for $i from 12 through 100 {
-    @if $i<40 {
+    @if $i < 50 {
       .fs-#{$i} {
         font-size: px($i);
       }
@@ -21,17 +21,21 @@
       font-weight: $i * 100;
     }
   }
+
   .fw-b {
     font-weight: bold;
   }
+
   /* #ifndef APP-NVUE */
   .fw-l {
     font-weight: lighter;
   }
+
   /* #endif */
   .fw-n {
     font-weight: normal;
   }
+
   /* 行高(0~100) */
   @for $i from 0 through 100 {
     .lh-#{$i} {
