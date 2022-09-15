@@ -1,11 +1,11 @@
-@import '../common/theme.scss';
-@import '../common/utils.scss';
+@import "../common/theme.scss";
+@import "../common/utils.scss";
 // 默认圆角大小
 $radius-md: px(10);
 // 默认边框宽度
 $border-width: 1px;
 // 默认边框颜色
-$border-color: map-get($colors, 'border-color');
+$border-color: map-get($colors, "border-color");
 
 @mixin borderDir($dir, $width: $border-width, $color: $border-color) {
   border-#{$dir}: $width solid $color;
@@ -84,8 +84,19 @@ $border-color: map-get($colors, 'border-color');
     .br-#{$i*5} {
       @include radius(px($i * 5));
     }
+    .br-tl-#{$i*5} {
+      border-top-left-radius: px($i * 5);
+    }
+    .br-tr-#{$i*5} {
+      border-top-right-radius: px($i * 5);
+    }
+    .br-bl-#{$i*5} {
+      border-bottom-left-radius: px($i * 5);
+    }
+    .br-br-#{$i*5} {
+      border-bottom-right-radius: px($i * 5);
+    }
   }
-
   .br-c {
     @include radius-circle();
   }
