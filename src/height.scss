@@ -7,10 +7,12 @@
       height: px($i * 10);
     }
   }
+  /* #ifndef MP-WEIXIN */
   /* 高百分比(1~100) */
   @for $i from 0 through 20 {
     .h-#{$i*5}\/100 {
       height: $i * 5%;
     }
   }
+  /* #endif */
 }

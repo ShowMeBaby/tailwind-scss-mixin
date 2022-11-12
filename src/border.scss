@@ -1,11 +1,11 @@
-@import "../common/theme.scss";
-@import "../common/utils.scss";
+@import '../common/theme.scss';
+@import '../common/utils.scss';
 // 默认圆角大小
 $radius-md: px(10);
 // 默认边框宽度
 $border-width: 1px;
 // 默认边框颜色
-$border-color: map-get($colors, "border-color");
+$border-color: map-get($colors, 'border-color');
 
 @mixin borderDir($dir, $width: $border-width, $color: $border-color) {
   border-#{$dir}: $width solid $color;
@@ -51,9 +51,11 @@ $border-color: map-get($colors, "border-color");
     box-sizing: border-box;
   }
   /* #endif */
+  /* #ifndef MP-WEIXIN */
   .grid-b {
     @include grid-border();
   }
+  /* #endif */
   .b {
     @include border();
   }
@@ -116,6 +118,7 @@ $border-color: map-get($colors, "border-color");
     .bw-#{$i} {
       border-width: px($i);
     }
+    /* #ifndef MP-WEIXIN */
     .grid-bw-#{$i} {
       & > * {
         margin-left: 0 - px($i);
@@ -123,5 +126,6 @@ $border-color: map-get($colors, "border-color");
         border-width: px($i);
       }
     }
+    /* #endif */
   }
 }

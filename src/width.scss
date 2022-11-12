@@ -7,11 +7,12 @@
       width: px($i * 10);
     }
   }
-
+  /* #ifndef MP-WEIXIN */
   /* 宽百分比(1~100) */
   @for $i from 0 through 20 {
     .w-#{$i*5}\/100 {
       width: $i * 5%;
     }
   }
+  /* #endif */
 }

@@ -51,12 +51,14 @@
   .inblock {
     display: inline-block;
   }
+  /* #ifndef MP-WEIXIN */
   .float-row {
     @include float-row();
   }
   .inblock-row {
     @include inblock-row();
   }
+  /* #endif */
   .scroller {
     @include scroller();
   }

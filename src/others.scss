@@ -97,9 +97,11 @@
   .reset {
     @include reset();
   }
+  /* #ifndef MP-WEIXIN */
   .image-ratio {
     @include image-ratio();
   }
+  /* #endif */
   .disabled {
     @include disabled();
     &.grey {
