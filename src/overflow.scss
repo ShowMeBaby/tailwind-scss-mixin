@@ -23,6 +23,18 @@
     overflow-y: auto;
   }
 
+  .o-unset {
+    overflow: unset;
+  }
+
+  .ox-unset {
+    overflow-x: unset;
+  }
+
+  .oy-unset {
+    overflow-y: unset;
+  }
+
   /* #ifndef APP-NVUE */
   .oy-s {
     overflow-y: scroll;
