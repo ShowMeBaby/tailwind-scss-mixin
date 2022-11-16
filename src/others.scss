@@ -1,4 +1,4 @@
-@import "./position.scss";
+@import './position.scss';
 
 @mixin reset() {
   font: inherit;
@@ -23,7 +23,7 @@
   &::after {
     display: block;
     clear: both;
-    content: "";
+    content: '';
   }
 }
 
@@ -43,7 +43,7 @@
 
 @mixin __ratioBefore($ratio: 1) {
   &::before {
-    content: "";
+    content: '';
     display: block;
     padding-top: $ratio * 100%;
   }
@@ -52,12 +52,12 @@
   position: relative;
   @include __ratioBefore($ratio);
   &::after {
-    content: "";
+    content: '';
     display: block;
     clear: both;
   }
 }
-@mixin image-ratio($ratio: 1, $fit: cover, $children: "*") {
+@mixin image-ratio($ratio: 1, $fit: cover, $children: '*') {
   position: relative;
   @include __ratioBefore($ratio);
   @each $child in $children {

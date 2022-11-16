@@ -1,12 +1,12 @@
-本库整合了常见而公用的scss的mixin方法,并基于此生成原子化css,以便用来提升开发效率.
+本库整合了常见而公用的 scss 的 mixin 方法,并基于此生成原子化 css,以便用来提升开发效率.
 
-> 目前这个库是一个纯scss库,你也可以通过build index.scss文件生成纯css代码,他支持任何使用scss的项目,不过目前我是以uniapp为目标平台开发的,本库已支持nvue模式.
+> 目前这个库是一个纯 scss 库,你也可以通过 build index.scss 文件生成纯 css 代码,他支持任何使用 scss 的项目,不过目前我是以 uniapp 为目标平台开发的,本库已支持 nvue 模式.
 
 ## 1、如何使用
 
 本库支持两种调用方式
 
-### 使用 scss mixin方法
+### 使用 scss mixin 方法
 
 ```scss
 // xxx.scss
@@ -21,9 +21,9 @@
 }
 ```
 
-### 使用 原子化css
+### 使用 原子化 css
 
-原子化css中的class命名因为使用较多的简写与mixin方法的名称不同,具体可以参考最底部的简写列表
+原子化 css 中的 class 命名因为使用较多的简写与 mixin 方法的名称不同,具体可以参考最底部的简写列表
 
 ```scss
 @import 'retrocode-scss-mixin/index.scss';
@@ -73,7 +73,7 @@ module.exports = {
       }
     }
   }
-};
+}
 ```
 
 ## 2、配置项
@@ -92,8 +92,7 @@ $colors: (
   /* 危险 */ danger: #d9534f,
   /* 成功 */ success: #4caf50,
   /* 警告 */ warning: #ffc107,
-  /* 阴影色 */ box-shadow-color:
-    rgba(
+  /* 阴影色 */ box-shadow-color: rgba(
       $color: #000000,
       $alpha: 0.3
     ),
@@ -161,49 +160,56 @@ $colors: (
 | t-   | text             |
 | td-  | text-decoration  |
 | w-   | width            |
-| *c   | center           |
-| *l   | left             |
-| *r   | right            |
-| *t   | top              |
-| *b   | bottom           |
-| *x   | left&right       |
-| *y   | top&bottom       |
+| \*c  | center           |
+| \*l  | left             |
+| \*r  | right            |
+| \*t  | top              |
+| \*b  | bottom           |
+| \*x  | left&right       |
+| \*y  | top&bottom       |
 
 ## 扩展
 
-### 当class过长时如何合并?
+### 当 class 过长时如何合并?
 
-我们可以使用scss的@extend继承来组合我们需要的组件和class.
+我们可以使用 scss 的@extend 继承来组合我们需要的组件和 class.
 
-例如这样组合一个类名为d的class:
+例如这样组合一个类名为 d 的 class:
 
 ```css
 // test.scss
-.a{
+.a {
   background-color: red;
 }
-.b{
+.b {
   color: red;
 }
-.c{
- @extend .a,.b;
+.c {
+  @extend .a, .b;
 }
-.d{
-  @extend .c,.a;
+.d {
+  @extend .c, .a;
   font-size: 1px;
 }
 ```
 
-最终scss会自动为我们组合生成我们需要的class.
+最终 scss 会自动为我们组合生成我们需要的 class.
 
 ```css
 // test.css
-.a, .c, .d {
-  background-color: red; }
-  
-.b, .c, .d {
-  color: red; }
-  
+.a,
+.c,
 .d {
-  font-size: 1px; }
+  background-color: red;
+}
+
+.b,
+.c,
+.d {
+  color: red;
+}
+
+.d {
+  font-size: 1px;
+}
 ```

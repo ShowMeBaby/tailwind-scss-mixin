@@ -1,0 +1,22 @@
+{
+  "name": "tailwind-scss-mixin",
+  "version": "1.0.0",
+  "description": "本库整合了常见而公用的scss的mixin方法,并基于此生成原子化css,以便用来提升开发效率.",
+  "main": "index.js",
+  "scripts": {
+    "format": "npx prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShowMeBaby/tailwind-scss-mixin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShowMeBaby/tailwind-scss-mixin/issues"
+  },
+  "homepage": "https://github.com/ShowMeBaby/tailwind-scss-mixin#readme",
+  "dependencies": {
+    "prettier": "^2.7.1"
+  }
+}

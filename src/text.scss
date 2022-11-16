@@ -30,7 +30,6 @@
   text-align-last: justify;
 }
 @mixin text-build() {
-
   .t-l {
     @include text-left();
   }
@@ -40,7 +39,6 @@
   .t-r {
     @include text-right();
   }
-
 
   /* 特殊处理 */
   .td-lt {
@@ -86,7 +84,7 @@
   /* #endif */
   @for $i from 1 through 20 {
     .ti-#{$i*10} {
-      text-indent: px($i*10);
+      text-indent: px($i * 10);
     }
   }
 
