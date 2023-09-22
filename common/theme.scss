@@ -6,6 +6,7 @@ $colors: (
      ===场景色===
      主题 */ primary: #1890ff,
   /* 背景 */ background: #eeeeee,
+  /* 背景渐变 */ background-lg: linear-gradient(135deg, #00b050 0%, #0660ba 100%),
   /* 次级 */ secondary: #424242,
   /* 重点 */ accent: #82b1ff,
   /* 错误 */ error: #ff5252,
@@ -55,5 +56,6 @@ $colors: (
   f00: #ff0000,
   f0f: #ff00ff,
   00f: #0000ff,
+  translucent: rgba(255, 255, 255, 0.2),
   transparent: transparent
 );

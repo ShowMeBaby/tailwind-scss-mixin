@@ -7,12 +7,32 @@
       width: px($i * 10);
     }
   }
-  /* #ifndef MP-WEIXIN */
+
+  /* 宽(1~100) */
+  @for $i from 0 through 80 {
+    .max-w-#{$i*10} {
+      max-width: px($i * 10);
+    }
+  }
+
+  /* 宽(1~100) */
+  @for $i from 0 through 80 {
+    .min-w-#{$i*10} {
+      min-width: px($i * 10);
+    }
+  }
+
   /* 宽百分比(1~100) */
   @for $i from 0 through 20 {
     .w-#{$i*5}\/100 {
       width: $i * 5%;
     }
   }
-  /* #endif */
+
+  /* 宽百分比(1~100) */
+  @for $i from 0 through 20 {
+    .max-w-#{$i*5}\/100 {
+      max-width: $i * 5%;
+    }
+  }
 }

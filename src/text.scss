@@ -62,7 +62,18 @@
       @include text-overflow($i);
     }
   }
-
+  .t-nowrap {
+    white-space: nowrap;
+  }
+  .t-white-space-normal {
+    white-space: normal;
+  }
+  .t-break-all {
+    word-break: break-all;
+  }
+  .t-break-keep {
+    word-break: keep-all;
+  }
   .t-oh {
     white-space: nowrap;
     overflow: hidden; /* 单行超出 */

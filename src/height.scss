@@ -7,12 +7,22 @@
       height: px($i * 10);
     }
   }
-  /* #ifndef MP-WEIXIN */
+  /* 高(1~100) */
+  @for $i from 1 through 150 {
+    .max-h-#{$i*10} {
+      max-height: px($i * 10);
+    }
+  }
   /* 高百分比(1~100) */
   @for $i from 0 through 20 {
     .h-#{$i*5}\/100 {
       height: $i * 5%;
     }
   }
-  /* #endif */
+  /* 高百分比(1~100) */
+  @for $i from 0 through 20 {
+    .max-h-#{$i*5}\/100 {
+      max-height: $i * 5%;
+    }
+  }
 }
