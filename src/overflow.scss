@@ -2,7 +2,7 @@
   .o-h {
     overflow: hidden;
   }
-
+  /* #ifndef APP-NVUE */
   .ox-h {
     overflow-x: hidden;
   }
@@ -10,11 +10,9 @@
   .oy-h {
     overflow-y: hidden;
   }
-
   .o-auto {
     overflow: auto;
   }
-
   .ox-auto {
     overflow-x: auto;
   }
@@ -22,7 +20,6 @@
   .oy-auto {
     overflow-y: auto;
   }
-
   .o-unset {
     overflow: unset;
   }
@@ -34,8 +31,6 @@
   .oy-unset {
     overflow-y: unset;
   }
-
-  /* #ifndef APP-NVUE */
   .oy-s {
     overflow-y: scroll;
   }

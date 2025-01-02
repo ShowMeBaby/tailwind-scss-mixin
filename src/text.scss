@@ -78,6 +78,7 @@
     white-space: nowrap;
     overflow: hidden; /* 单行超出 */
     text-overflow: ellipsis;
+    lines: 1;
   }
   .t-ohs {
     overflow: hidden;
@@ -92,17 +93,16 @@
       -webkit-line-clamp: $i;
     }
   }
-  /* #endif */
   @for $i from 1 through 20 {
     .ti-#{$i*10} {
       text-indent: px($i * 10);
     }
   }
-
   /* 字间距 */
   @for $i from 1 through 20 {
     .t-ls-#{$i} {
       letter-spacing: px($i);
     }
   }
+  /* #endif */
 }

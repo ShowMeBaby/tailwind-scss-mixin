@@ -91,6 +91,9 @@
 }
 
 @mixin flex-build() {
+  .flex-1 {
+    flex: 1;
+  }
   .flex-row {
     @include flex-row();
     &.top {

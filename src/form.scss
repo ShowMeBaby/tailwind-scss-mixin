@@ -1,6 +1,7 @@
 @import '../common/theme.scss';
 
 @mixin form-build() {
+  /* #ifndef APP-NVUE */
   .form-required {
     &-l {
       &::before {
@@ -17,4 +18,5 @@
       }
     }
   }
+  /* #endif */
 }

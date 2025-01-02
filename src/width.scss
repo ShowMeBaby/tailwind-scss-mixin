@@ -3,11 +3,11 @@
 @mixin width-build() {
   /* 宽(1~100) */
   @for $i from 0 through 150 {
-    .w-#{$i*10} {
-      width: px($i * 10);
+    .w-#{$i*5} {
+      width: px($i * 5);
     }
   }
-
+  /* #ifndef APP-NVUE */
   /* 宽(1~100) */
   @for $i from 0 through 80 {
     .max-w-#{$i*10} {
@@ -21,18 +21,19 @@
       min-width: px($i * 10);
     }
   }
-
+  /* #endif */
   /* 宽百分比(1~100) */
   @for $i from 0 through 20 {
-    .w-#{$i*5}\/100 {
+    .w-#{$i*5}-100 {
       width: $i * 5%;
     }
   }
-
+  /* #ifndef APP-NVUE */
   /* 宽百分比(1~100) */
   @for $i from 0 through 20 {
     .max-w-#{$i*5}\/100 {
       max-width: $i * 5%;
     }
   }
+  /* #endif */
 }

@@ -3,10 +3,12 @@
 @mixin height-build() {
   /* 高(1~100) */
   @for $i from 1 through 150 {
-    .h-#{$i*10} {
-      height: px($i * 10);
+    .h-#{$i*5} {
+      height: px($i * 5);
     }
   }
+
+  /* #ifndef APP-NVUE */
   /* 高(1~100) */
   @for $i from 1 through 150 {
     .max-h-#{$i*10} {
@@ -25,4 +27,5 @@
       max-height: $i * 5%;
     }
   }
+  /* #endif */
 }

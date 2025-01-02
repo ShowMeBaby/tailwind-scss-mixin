@@ -50,10 +50,10 @@ $border-color: map-get($colors, 'border-color');
   .b-box {
     box-sizing: border-box;
   }
-  /* #endif */
   .grid-b {
     @include grid-border();
   }
+  /* #endif */
   .b {
     @include border();
   }
@@ -84,6 +84,18 @@ $border-color: map-get($colors, 'border-color');
     .br-#{$i*5} {
       @include radius(px($i * 5));
     }
+    .br-tl-#{$i*5} {
+      border-top-left-radius: px($i * 5);
+    }
+    .br-bl-#{$i*5} {
+      border-bottom-left-radius: px($i * 5);
+    }
+    .br-tr-#{$i*5} {
+      border-top-right-radius: px($i * 5);
+    }
+    .br-br-#{$i*5} {
+      border-bottom-right-radius: px($i * 5);
+    }
   }
 
   .br-c {
@@ -105,6 +117,19 @@ $border-color: map-get($colors, 'border-color');
     .bw-#{$i} {
       border-width: px($i);
     }
+    .bw-t-#{$i} {
+      border-top-width: px($i);
+    }
+    .bw-b-#{$i} {
+      border-bottom-width: px($i);
+    }
+    .bw-l-#{$i} {
+      border-left-width: px($i);
+    }
+    .bw-r-#{$i} {
+      border-right-width: px($i);
+    }
+    /* #ifndef APP-NVUE */
     .grid-bw-#{$i} {
       & > * {
         margin-left: 0 - px($i);
@@ -112,5 +137,6 @@ $border-color: map-get($colors, 'border-color');
         border-width: px($i);
       }
     }
+    /* #endif */
   }
 }
